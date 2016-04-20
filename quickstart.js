@@ -29,7 +29,6 @@ fs.readFile('client_secret.json', function processClientSecrets(err, content) {
  * @param {function} callback The callback to call with the authorized client.
  */
 function authorize(credentials, callback) {
-  console.log(credentials);
   var clientSecret = credentials.installed.client_secret;
   var clientId = credentials.installed.client_id;
   var redirectUrl = credentials.installed.redirect_uris[0];
@@ -105,7 +104,7 @@ function listFiles(auth) {
   var service = google.drive('v3');
   service.files.list({
     auth: auth,
-    pageSize: 10,
+    pageSize: 50,
     fields: "nextPageToken, files(id, name)"
   }, function(err, response) {
     if (err) {
