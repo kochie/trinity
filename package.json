@@ -20,8 +20,13 @@
     "serve-favicon": "^2.0.1"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-uglify": "^1.5.3",
     "jshint": "^2.5.6",
-    "nsp": "^2.1.0"
+    "nsp": "^2.1.0",
+    "uglify": "^0.1.5"
   },
   "repository": {
     "type": "",
